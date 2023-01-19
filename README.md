@@ -1,1 +1,3 @@
-# Tugas-Akhir-Alpro
+Membuat ListHp
+Nama : Arico Septian
+Nim : 1102220018
