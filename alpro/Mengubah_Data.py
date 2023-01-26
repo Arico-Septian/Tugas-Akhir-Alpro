@@ -9,14 +9,14 @@ def ubahData(ubah, merek, type, harga):
 
 listMenu = ["1.Menambah Data", "2.Menampilkan Data", "3.Mengubah Data" ,"4.Menghapus Data"]
 while True :
-    print("----------------------")
-    print("|    Daftar Menu Hp  |")
-    print("----------------------")
+    print("-----------------------")
+    print("|    Daftar Menu Hp : |")
+    print("-----------------------")
     for x in listMenu :
         print(x)
-    print("----------------------")
-    print("|     Pilih Menu     |")
-    print("----------------------")
+    print("-----------------------")
+    print("|     Pilih Menu   :  |")
+    print("-----------------------")
     menu =int(input())
     if menu == 1 :
         tambahData()
