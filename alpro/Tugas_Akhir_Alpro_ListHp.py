@@ -1,13 +1,13 @@
 def lihatData():
-    print("-------------------------------------------------")
-    print("|                   Daftar HP                   |")
-    print("-------------------------------------------------")
+    print("----------------------------------------------------")
+    print("|                     Daftar HP                    |")
+    print("----------------------------------------------------")
     data = zip(listMerek, listType, listHarga)
-    print ("{:<5} {:<15} {:<15} {:<10}".format('No','Merk','Type','Harga'))
-    print("-------------------------------------------------")
+    print ("| {:<3}| {:<15}| {:<15}| {:<10}|".format('No','Merk','Type','Harga'))
+    print("----------------------------------------------------")
     for index, v in enumerate(data):
         merek, type, harga = v
-        print ("{:<5} {:<15} {:<15} {:<10}".format( index+1, merek, type, harga))
+        print ("| {:<3}| {:<15}| {:<15}| {:<10}|".format( index+1, merek, type, harga))
 
 def tambahData(merek, type,harga):
     listMerek.append(merek)
@@ -30,14 +30,14 @@ listHarga = [2500000,3500000,4500000]
 
 listMenu = ["1.Menambah Data", "2.Menampilkan Data", "3.Mengubah Data" ,"4.Menghapus Data"]
 while True :
-    print("----------------------")
-    print("|    Daftar Menu Hp  |")
-    print("----------------------")
+    print("------------------------")
+    print("|    Daftar Menu Hp :  |")
+    print("------------------------")
     for x in listMenu :
         print(x)
-    print("----------------------")
-    print("|     Pilih Menu     |")
-    print("----------------------")
+    print("-----------------------")
+    print("|      Pilih Menu  :  |")
+    print("-----------------------")
     menu =int(input())
     if menu == 1 :
         print("Masukkan Merek :")
@@ -50,7 +50,7 @@ while True :
     elif menu == 2 :
         lihatData()
     elif menu == 3 :
-        print("Data Yang Akan Diubah")
+        print("Data Yang Akan Diubah :")
         ubah =int(input())
         print("Masukkan Merek :")
         merek =str(input())
@@ -60,9 +60,9 @@ while True :
         harga =int(input())
         ubahData(ubah, merek, type, harga)
     elif menu == 4 :
-        print("Data Yang Akan Dihapus")
+        print("Data Yang Akan Dihapus :")
         hapus =int(input())
         hapusData(hapus)
     else :
         break
-    print("-------------------------------------------------")
+    print("----------------------------------------------------")
