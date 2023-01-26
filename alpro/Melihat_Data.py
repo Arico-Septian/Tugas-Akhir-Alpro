@@ -3,11 +3,12 @@ listType = ["Galaxy a20", "Reno 8", "Xr"]
 listHarga = [2500000,3500000,4500000]
 
 def lihatData():
-    print("-----------------------------------------------")
-    print("|                  Daftar HP                  |")
-    print("-----------------------------------------------")
+    print("----------------------------------------------------")
+    print("|                     Daftar HP                    |")
+    print("----------------------------------------------------")
     data = zip(listMerek, listType, listHarga)
     print ("{:<5} {:<15} {:<15} {:<10}".format('No','Merk','Type','Harga'))
+    print("----------------------------------------------------")
     for index, v in enumerate(data):
         merek, type, harga = v
         print ("{:<5} {:<15} {:<15} {:<10}".format( index+1, merek, type, harga))
@@ -34,3 +35,4 @@ while True :
         hapusData()
     else :
         break
+    print("----------------------------------------------------")
