@@ -1,13 +1,13 @@
 def lihatData():
-    print("----------------------------------------------------")
-    print("|                     Daftar HP                    |")
-    print("----------------------------------------------------")
+    print("------------------------------------------------------------")
+    print("|><><><><><><><><><>< DAFTAR HANDPHONE ><><><><><><><><><><|")
+    print("------------------------------------------------------------")
     data = zip(listMerek, listType, listHarga)
-    print ("| {:<3}| {:<15}| {:<15}| {:<10}|".format('No','Merk','Type','Harga'))
-    print("----------------------------------------------------")
+    print ("| {:<5}| {:<15}| {:<15}| {:<16}|".format('No','Merk Handphone','Type Handphone','Harga Handphone'))
+    print("------------------------------------------------------------")
     for index, v in enumerate(data):
         merek, type, harga = v
-        print ("| {:<3}| {:<15}| {:<15}| {:<10}|".format( index+1, merek, type, harga))
+        print ("| {:<5}| {:<15}| {:<15}| {:<16}|".format( index+1, merek, type, harga))
 
 def tambahData(merek, type,harga):
     listMerek.append(merek)
@@ -35,9 +35,9 @@ while True :
     print("------------------------")
     for x in listMenu :
         print(x)
-    print("-----------------------")
-    print("|      Pilih Menu  :  |")
-    print("-----------------------")
+    print("---------------------")
+    print("|    Pilih Menu  :  |")
+    print("---------------------")
     menu =int(input())
     if menu == 1 :
         print("Masukkan Merek :")
@@ -65,4 +65,4 @@ while True :
         hapusData(hapus)
     else :
         break
-    print("----------------------------------------------------")
+    print("------------------------------------------------------------")
