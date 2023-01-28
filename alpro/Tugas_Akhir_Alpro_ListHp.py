@@ -14,6 +14,15 @@ def tambahData(merek, type,harga):
     listType.append(type)
     listHarga.append(harga)
     
+    stringMerek = ",".join(listMerek)
+    stringType = ",".join(listType)
+    stringHarga = ",".join(str(x) for x in listHarga)
+    my_file = open("NamaList.txt", "w")
+    my_file.write(stringMerek + "\n") #\n untuk enter
+    my_file.write(stringType + "\n")
+    my_file.write(stringHarga)
+    my_file.close()
+    
 def hapusData(hapus):
     listMerek.pop(hapus - 1)
     listType.pop(hapus - 1)
