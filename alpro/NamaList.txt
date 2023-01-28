@@ -1,0 +1,3 @@
+samsung,oppo,iphone
+Galaxy a20,Reno 8,Xr
+2500000,3500000,4500000
