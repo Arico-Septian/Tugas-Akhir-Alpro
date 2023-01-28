@@ -96,17 +96,23 @@ while True :
     elif menu == 3 :
         print("Data Yang Akan Diubah :")
         ubah =int(input())
-        print("Masukkan Merek :")
-        merek =str(input())
-        print("Masukkan Type Hp :")
-        type =str(input())
-        print("Masukkan Harga Hp :")
-        harga =int(input())
-        ubahData(ubah, merek, type, harga)
+        if ubah <len(listMerek) :
+            print("Masukkan Merek :")
+            merek =str(input())
+            print("Masukkan Type Hp :")
+            type =str(input())
+            print("Masukkan Harga Hp :")
+            harga =int(input())
+            ubahData(ubah, merek, type, harga)
+        else :
+            print ("Data Yang Anda Masukkan Tidak Ada")
     elif menu == 4 :
         print("Data Yang Akan Dihapus :")
         hapus =int(input())
-        hapusData(hapus)
+        if hapus <len(listMerek) :    
+            hapusData(hapus)
+        else :
+            print("Data Yang Anda Masukkan Tidak Ada")
     else :
         break
     print("------------------------------------------------------------")
