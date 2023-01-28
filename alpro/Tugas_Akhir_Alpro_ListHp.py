@@ -2,7 +2,7 @@ def lihatData():
     print("------------------------------------------------------------")
     print("|><><><><><><><><><>< DAFTAR HANDPHONE ><><><><><><><><><><|")
     print("------------------------------------------------------------")
-    data = zip(listMerek, listType, listHarga)
+    data = zip(listMerek, listType, listHarga) #zip untuk menggabungkan list
     print ("| {:<5}| {:<15}| {:<15}| {:<16}|".format('No','Merk Handphone','Type Handphone','Harga Handphone'))
     print("------------------------------------------------------------")
     for index, v in enumerate(data):
@@ -69,10 +69,9 @@ while True:
         listType = data.rstrip().split(",")
     elif count == 3 :
         listHarga = data.rstrip().split(",")
-    
-
 
 listMenu = ["1.Menambah Data", "2.Menampilkan Data", "3.Mengubah Data" ,"4.Menghapus Data"]
+
 while True :
     print("------------------------")
     print("|    Daftar Menu Hp :  |")
