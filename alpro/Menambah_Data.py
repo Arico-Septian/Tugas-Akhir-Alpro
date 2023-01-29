@@ -6,13 +6,13 @@ def tambahData(merek, type,harga):
     stringMerek = ",".join(listMerek)
     stringType = ",".join(listType)
     stringHarga = ",".join(str(x) for x in listHarga) #mengubah harga dari type int menjadi str dan menggabungkan str menggunakan koma
-    my_file = open("NamaList.txt", "w")
+    my_file = open("NamaList.txt", "w") #w untuk membuka txt dengan fungsi write pada file
     my_file.write(stringMerek + "\n") #\n untuk enter
     my_file.write(stringType + "\n")
     my_file.write(stringHarga)
     my_file.close()
     
-my_file = open("NamaList.txt", "r")
+my_file = open("NamaList.txt", "r") #r untuk membaca file txt
 count = 0
 
 listMerek = []
