@@ -50,6 +50,7 @@ while True :
         print("Masukkan Harga Hp :")
         harga =int(input())
         tambahData(merek, type, harga)
+        lihatData()
     elif menu == 2 :
         lihatData()
     elif menu == 3 :
