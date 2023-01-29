@@ -56,6 +56,7 @@ while True :
             print("Masukkan Harga Hp :")
             harga =int(input())
             ubahData(ubah, merek, type, harga)
+            lihatData()
     elif menu == 4 :
         hapusData()
     else :
