@@ -7,6 +7,15 @@ def tambahData(merek, type,harga):
     listType.append(type)
     listHarga.append(harga)
     
+    stringMerek = ",".join(listMerek)
+    stringType = ",".join(listType)
+    stringHarga = ",".join(str(x) for x in listHarga) #mengubah harga dari type int menjadi str dan menggabungkan str menggunakan koma
+    my_file = open("NamaList.txt", "w")
+    my_file.write(stringMerek + "\n") #\n untuk enter
+    my_file.write(stringType + "\n")
+    my_file.write(stringHarga)
+    my_file.close()
+    
 listMenu = ["1.Menambah Data", "2.Menampilkan Data", "3.Mengubah Data" ,"4.Menghapus Data"]
 while True :
     print("------------------------")
@@ -34,3 +43,4 @@ while True :
         hapusData()
     else :
         break
+    print("------------------------------------------------------------")
