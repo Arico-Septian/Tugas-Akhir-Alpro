@@ -3,7 +3,7 @@ def lihatData():
     print("|><><><><><><><><><>< DAFTAR HANDPHONE ><><><><><><><><><><|")
     print("------------------------------------------------------------")
     data = zip(listMerek, listType, listHarga) #zip untuk menggabungkan menjadi 1 list
-    print ("| {:<5}| {:<15}| {:<15}| {:<16}|".format('No','Merk Handphone','Type Handphone','Harga Handphone'))
+    print("| {:<5}| {:<15}| {:<15}| {:<16}|".format('No','Merk Handphone','Type Handphone','Harga Handphone'))
     print("------------------------------------------------------------")
     for index, v in enumerate(data): #enumerate untuk mendapatkan index dari list data
         merek, type, harga = v
