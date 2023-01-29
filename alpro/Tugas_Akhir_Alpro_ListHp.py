@@ -5,7 +5,6 @@ def lihatData():
     data = zip(listMerek, listType, listHarga) #zip untuk menggabungkan menjadi 1 list
     print ("| {:<5}| {:<15}| {:<15}| {:<16}|".format('No','Merk Handphone','Type Handphone','Harga Handphone'))
     print("------------------------------------------------------------")
-    
     for index, v in enumerate(data):
         merek, type, harga = v
         print ("| {:<5}| {:<15}| {:<15}| {:<16}|".format( index+1, merek, type, harga))
@@ -14,7 +13,6 @@ def tambahData(merek, type,harga):
     listMerek.append(merek)
     listType.append(type)
     listHarga.append(harga)
-    
     stringMerek = ",".join(listMerek)
     stringType = ",".join(listType)
     stringHarga = ",".join(str(x) for x in listHarga) #mengubah harga dari type int menjadi str dan menggabungkan str menggunakan koma
