@@ -1,7 +1,3 @@
-listMerek = ["samsung", "oppo", "iphone"]
-listType = ["Galaxy a20", "Reno 8", "Xr"]
-listHarga = [2500000,3500000,4500000]
-
 def tambahData(merek, type,harga):
     listMerek.append(merek)
     listType.append(type)
@@ -15,6 +11,25 @@ def tambahData(merek, type,harga):
     my_file.write(stringType + "\n")
     my_file.write(stringHarga)
     my_file.close()
+    
+my_file = open("NamaList.txt", "r")
+count = 0
+
+listMerek = []
+listType = []
+listHarga = []
+
+while True:
+    count += 1  
+    data = my_file.readline()
+    if not data:
+        break
+    if count == 1 :
+        listMerek = data.rstrip().split(",")
+    elif count == 2 :
+        listType = data.rstrip().split(",")
+    elif count == 3 :
+        listHarga = data.rstrip().split(",")
     
 listMenu = ["1.Menambah Data", "2.Menampilkan Data", "3.Mengubah Data" ,"4.Menghapus Data"]
 while True :
