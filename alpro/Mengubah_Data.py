@@ -48,7 +48,7 @@ while True :
     elif menu == 3 :
         print("Data Yang Akan Diubah :")
         ubah =int(input())
-        if ubah <len(listMerek) :
+        if ubah <=len(listMerek) :
             print("Masukkan Merek :")
             merek =str(input())
             print("Masukkan Type Hp :")
