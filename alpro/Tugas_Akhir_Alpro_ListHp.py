@@ -2,9 +2,10 @@ def lihatData():
     print("------------------------------------------------------------")
     print("|><><><><><><><><><>< DAFTAR HANDPHONE ><><><><><><><><><><|")
     print("------------------------------------------------------------")
-    data = zip(listMerek, listType, listHarga) #zip untuk menggabungkan list
+    data = zip(listMerek, listType, listHarga) #zip untuk menggabungkan menjadi 1 list
     print ("| {:<5}| {:<15}| {:<15}| {:<16}|".format('No','Merk Handphone','Type Handphone','Harga Handphone'))
     print("------------------------------------------------------------")
+    
     for index, v in enumerate(data):
         merek, type, harga = v
         print ("| {:<5}| {:<15}| {:<15}| {:<16}|".format( index+1, merek, type, harga))
@@ -17,6 +18,7 @@ def tambahData(merek, type,harga):
     stringMerek = ",".join(listMerek)
     stringType = ",".join(listType)
     stringHarga = ",".join(str(x) for x in listHarga)
+    
     my_file = open("NamaList.txt", "w")
     my_file.write(stringMerek + "\n") #\n untuk enter
     my_file.write(stringType + "\n")
@@ -24,7 +26,7 @@ def tambahData(merek, type,harga):
     my_file.close()
     
 def hapusData(hapus):
-    listMerek.pop(hapus - 1)
+    listMerek.pop(hapus - 1) #-1 karena index dimulai dari 0
     listType.pop(hapus - 1)
     listHarga.pop(hapus - 1)
     
