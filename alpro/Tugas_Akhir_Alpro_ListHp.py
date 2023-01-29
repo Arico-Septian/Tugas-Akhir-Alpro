@@ -103,7 +103,7 @@ while True :
             ubahData(ubah, merek, type, harga)
             lihatData()
         else :
-            print ("Data Yang Anda Masukkan Tidak Ada")
+            print ("Data Yang Anda Masukkan Tidak Ada :(")
     elif menu == 4 :
         print("Data Yang Akan Dihapus :")
         hapus =int(input())
@@ -111,7 +111,7 @@ while True :
             hapusData(hapus)
             lihatData()
         else :
-            print("Data Yang Anda Masukkan Tidak Ada")
+            print("Data Yang Anda Masukkan Tidak Ada :(")
     else :
         break
     print("------------------------------------------------------------")
