@@ -5,7 +5,7 @@ def lihatData():
     data = zip(listMerek, listType, listHarga) #zip untuk menggabungkan menjadi 1 list
     print ("| {:<5}| {:<15}| {:<15}| {:<16}|".format('No','Merk Handphone','Type Handphone','Harga Handphone'))
     print("------------------------------------------------------------")
-    for index, v in enumerate(data):
+    for index, v in enumerate(data): #enumerate untuk mendapatkan index dari list data
         merek, type, harga = v
         print ("| {:<5}| {:<15}| {:<15}| {:<16}|".format( index+1, merek, type, harga))
 
@@ -16,7 +16,7 @@ def tambahData(merek, type,harga):
     stringMerek = ",".join(listMerek)
     stringType = ",".join(listType)
     stringHarga = ",".join(str(x) for x in listHarga) #mengubah harga dari type int menjadi str dan menggabungkan str menggunakan koma
-    my_file = open("NamaList.txt", "w")
+    my_file = open("NamaList.txt", "w") #w untuk membuka txt dengan fungsi write pada file
     my_file.write(stringMerek + "\n") #\n untuk enter
     my_file.write(stringType + "\n")
     my_file.write(stringHarga)
@@ -29,7 +29,7 @@ def hapusData(hapus):
     stringMerek = ",".join(listMerek)
     stringType = ",".join(listType)
     stringHarga = ",".join(str(x) for x in listHarga) #mengubah harga dari type int menjadi str dan menggabungkan str menggunakan koma
-    my_file = open("NamaList.txt", "w")
+    my_file = open("NamaList.txt", "w") #w untuk membuka txt dengan fungsi write pada file
     my_file.write(stringMerek + "\n")
     my_file.write(stringType + "\n")
     my_file.write(stringHarga)
@@ -37,18 +37,18 @@ def hapusData(hapus):
     
 def ubahData(ubah, merek, type, harga):
     listMerek[ubah - 1] = merek 
-    listType[ubah - 1] = type       #-1 karena index dimulai dari 0
+    listType[ubah - 1] = type   #-1 karena index dimulai dari 0
     listHarga[ubah - 1] = harga
     stringMerek = ",".join(listMerek)
     stringType = ",".join(listType)
     stringHarga = ",".join(str(x) for x in listHarga) #mengubah harga dari type int menjadi str dan menggabungkan str menggunakan koma
-    my_file = open("NamaList.txt", "w")
+    my_file = open("NamaList.txt", "w") #w untuk membuka txt dengan fungsi write pada file
     my_file.write(stringMerek + "\n")
     my_file.write(stringType + "\n")
     my_file.write(stringHarga)
     my_file.close()
     
-my_file = open("NamaList.txt", "r")
+my_file = open("NamaList.txt", "r") #r untuk membaca file txt
 count = 0
 
 listMerek = []
@@ -87,12 +87,13 @@ while True :
         print("Masukkan Harga Hp :")
         harga =int(input())
         tambahData(merek, type, harga)
+        lihatData()
     elif menu == 2 :
         lihatData()
     elif menu == 3 :
         print("Data Yang Akan Diubah :")
         ubah =int(input())
-        if ubah <len(listMerek) :
+        if ubah <=len(listMerek) :
             print("Masukkan Merek :")
             merek =str(input())
             print("Masukkan Type Hp :")
@@ -100,13 +101,15 @@ while True :
             print("Masukkan Harga Hp :")
             harga =int(input())
             ubahData(ubah, merek, type, harga)
+            lihatData()
         else :
             print ("Data Yang Anda Masukkan Tidak Ada")
     elif menu == 4 :
         print("Data Yang Akan Dihapus :")
         hapus =int(input())
-        if hapus <len(listMerek) :    
+        if hapus <=len(listMerek) :    
             hapusData(hapus)
+            lihatData()
         else :
             print("Data Yang Anda Masukkan Tidak Ada")
     else :
