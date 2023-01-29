@@ -52,6 +52,7 @@ while True :
         hapus =int(input())
         if hapus <=len(listMerek) :    
             hapusData(hapus)
+            lihatData()
         else :
             print("Data Yang Anda Masukkan Tidak Ada")
     else :
