@@ -56,3 +56,4 @@ while True :
             print("Data Yang Anda Masukkan Tidak Ada")
     else :
         break
+    print("------------------------------------------------------------")
