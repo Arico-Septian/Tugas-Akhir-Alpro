@@ -17,7 +17,7 @@ def tambahData(merek, type,harga):
     
     stringMerek = ",".join(listMerek)
     stringType = ",".join(listType)
-    stringHarga = ",".join(str(x) for x in listHarga)
+    stringHarga = ",".join(str(x) for x in listHarga) #mengubah harga dari type int menjadi str dan menggabungkan str menggunakan koma
     
     my_file = open("NamaList.txt", "w")
     my_file.write(stringMerek + "\n") #\n untuk enter
@@ -40,13 +40,13 @@ def hapusData(hapus):
     my_file.close()
     
 def ubahData(ubah, merek, type, harga):
-    listMerek[ubah - 1] = merek
-    listType[ubah - 1] = type
+    listMerek[ubah - 1] = merek 
+    listType[ubah - 1] = type       #-1 karena index dimulai dari 0
     listHarga[ubah - 1] = harga
     
     stringMerek = ",".join(listMerek)
     stringType = ",".join(listType)
-    stringHarga = ",".join(str(x) for x in listHarga)
+    stringHarga = ",".join(str(x) for x in listHarga) #mengubah harga dari type int menjadi str dan menggabungkan str menggunakan koma
     my_file = open("NamaList.txt", "w")
     my_file.write(stringMerek + "\n")
     my_file.write(stringType + "\n")
