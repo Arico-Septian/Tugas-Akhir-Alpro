@@ -2,14 +2,14 @@ def lihatData():
     print("------------------------------------------------------------")
     print("|><><><><><><><><><>< DAFTAR HANDPHONE ><><><><><><><><><><|")
     print("------------------------------------------------------------")
-    data = zip(listMerek, listType, listHarga)
+    data = zip(listMerek, listType, listHarga) #zip untuk menggabungkan menjadi 1 list
     print("| {:<5}| {:<15}| {:<15}| {:<16}|".format('No','Merk','Type','Harga'))
     print("------------------------------------------------------------")
-    for index, v in enumerate(data):
+    for index, v in enumerate(data): #enumerate untuk mendapatkan index dari list data
         merek, type, harga = v
         print ("| {:<5}| {:<15}| {:<15}| {:<16}|".format( index+1, merek, type, harga))
 
-my_file = open("NamaList.txt", "r")
+my_file = open("NamaList.txt", "r") #r untuk membaca file txt
 count = 0
 
 listMerek = []
