@@ -50,7 +50,7 @@ while True :
     elif menu == 4 :
         print("Data Yang Akan Dihapus :")
         hapus =int(input())
-        if hapus <len(listMerek) :    
+        if hapus <=len(listMerek) :    
             hapusData(hapus)
         else :
             print("Data Yang Anda Masukkan Tidak Ada")
